@@ -1,7 +1,7 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-with open("comments2") as f:
-	t = f.read().split('\n')
+with open("comments") as f:
+	t = f.read().split('\n\n\n\n\n')
 
 sid = SentimentIntensityAnalyzer()
 

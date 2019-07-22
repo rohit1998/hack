@@ -17,7 +17,7 @@ if __name__ == "__main__":
 	# url = "https://en.wikipedia.org/wiki/Automatic_summarization"
 	# parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
 	# or for plain text files
-	parser = PlaintextParser.from_file("comments", Tokenizer(LANGUAGE))
+	parser = PlaintextParser.from_file("keyphrase", Tokenizer(LANGUAGE))
 
 	stemmer = Stemmer(LANGUAGE)
 
