@@ -43,7 +43,8 @@ with open("keyphrase",'w') as file:
 			file.write('\n')
 		
 		except Exception as e: 
-			print(e)
+			# print(e)
+			pass
 
 
 
