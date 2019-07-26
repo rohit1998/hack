@@ -52,24 +52,36 @@ with open("keyphrase",'w') as file:
 
 
 			if 'teams' in keyphrases and 'slack' not in keyphrases:
-				# print(comment)
+				# pass
 				ss = sid.polarity_scores(comment)
-				print(ss)
-
 				if(ss['pos']>0.2):
+					print(comment)
+					# print(ss)
 					text = text+comment
 
-				if(ss['neg']>0.15):
-					text = text+comment
-
-
-
-
+				# if(ss['neg']>0.1):
+				# 	print(comment)
+				# 	# print(ss)
+				# 	text = text+comment
 
 				# sentiment = TextBlob(comment)
 				# print("Sentiment Score: ", sentiment.sentiment.polarity)
-			# if 'teams' not in keyphrases and 'slack' in keyphrases:
-			# 	print(comment)
+			if 'teams' not in keyphrases and 'slack' in keyphrases:
+				pass
+				# ss = sid.polarity_scores(comment)
+				# if(ss['pos']>0.2):
+				# 	print(comment)
+				# 	# print(ss,'\n\n')
+				# 	text = text+comment
+
+				# if(ss['neg']>0.1):
+				# 	print(comment)
+				# 	# print(ss)
+				# 	text = text+comment
+
+
+
+				# print(comment)
 			# if 'teams' in keyphrases and 'slack' in keyphrases:
 			# 	print(comment)
 
@@ -78,7 +90,7 @@ with open("keyphrase",'w') as file:
 			# print(e)
 			pass
 
-	print(text)
+	# print(text)
 	
 	LANGUAGE = "english"
 	SENTENCES_COUNT = 5
@@ -91,7 +103,7 @@ with open("keyphrase",'w') as file:
 	summarizer.stop_words = get_stop_words(LANGUAGE)
 
 
-	print("#######")
+	print("\n\n#######\n\n")
 	for sentence in summarizer(parser.document, SENTENCES_COUNT):
 		print(sentence)
 
